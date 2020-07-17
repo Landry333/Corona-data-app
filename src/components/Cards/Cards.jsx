@@ -23,16 +23,16 @@ const Cards =({data:{confirmed,recovered,deaths,lastUpdate}}) => {
                 <Grid item component={Card}>
                     <CardContent>
                         <Typography color="textSecondary" gutterBottom>Recovered</Typography>
-                        <Typography variant="h5">REAL DATA</Typography>
-                        <Typography color="textSecondary">REAL DATE</Typography>
+                        <Typography variant="h5">{recovered.value}</Typography>
+                        <Typography color="textSecondary">{new Date(lastUpdate).toDateString()}</Typography>
                         <Typography variant="body2">Number of recovered cases from COVID-19</Typography>
                     </CardContent>
                 </Grid>
                 <Grid item component={Card}>
                     <CardContent>
                         <Typography color="textSecondary" gutterBottom>Deaths</Typography>
-                        <Typography variant="h5">REAL DATA</Typography>
-                        <Typography color="textSecondary">REAL DATE</Typography>
+                        <Typography variant="h5">{deaths.value}</Typography>
+                        <Typography color="textSecondary">{new Date(lastUpdate).toDateString()}</Typography>
                         <Typography variant="body2">Number of deaths cases from COVID-19</Typography>
                     </CardContent>
                 </Grid>
